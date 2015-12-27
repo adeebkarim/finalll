@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="del">
+<target name="all">
+<mkdir dir="compilefolder">
+</mkdir>
+<mkdir dir="jarfolder"></mkdir>
+
+<javac srcdir="src" destdir="compilefolder" includeantruntime="false">
+</javac>
+
+<java classname="Class2">
+<classpath path="compilefolder">
+</classpath>
+</java>
+
+<jar basedir="compilefolder" jarfile="jarfolder/adeeb.jar">
+<manifest >
+<attribute name="Main-Class" value="Class2">
+</attribute>
+
+</manifest>
+</jar>
+
+</target>
+
+
+</project>
